@@ -3,16 +3,17 @@
 {% block title %}Bretaigne MAP {{ controller_name }}!{% endblock %}
 
 {% block body %}
+    <div class="mapcontainer">
+        <div class="map">
+        </div>
+    </div>
+{% endblock %}
 
-<section class="articles">
-
-    <article>
-        <h2>Titre de l'article</h2>
-        <img src="http://placehold.it/200x150" alt="">
-        <div class="metadata">test</div>
-        <div class="metadata">test</div>
-    </article>
-    
-</section>
-
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="{{ asset('js/jquery.mapael.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/banner.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/action.js') }}" charset="utf-8"></script>
 {% endblock %}
